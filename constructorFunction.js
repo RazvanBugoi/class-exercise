@@ -14,13 +14,10 @@ function Person(firstName, lastName, age, gender, interests) {
     });
 }
 
-function Teacher(subject, name, age, gender, interests) {
-  Person.call(this, name, age, gender, interests);
+function Teacher(subject, firstName, lastName, age, gender, interests) {
+  Person.call(this, firstName, lastName, age, gender, interests);
   this.subject = subject;
   this.greeting = function () {
     return `Hello. My name is ${this.name}, I am ${this.age} years old and I teach ${this.subject}.`;
   };
 }
-
-// Teacher.prototype = Object.create(Person.prototype);
-[...ijoijo];
